@@ -34,14 +34,14 @@ module.exports.scrape = async (text) => {
                 let icon;
                 let url = element.querySelector(".result__url").href;
 
-                let iconElement = element.querySelector(".result__icon__img");
+                // let iconElement = element.querySelector(".result__icon__img");
 
-                if(iconElement && iconElement.getAttribute) icon = iconElement.getAttribute("href");
+                // if(iconElement && iconElement.getAttribute) icon = iconElement.getAttribute("href");
 
                 results.push({
                     title,
                     snippet,
-                    icon,
+                    // icon,
                     url
                 });
             }
