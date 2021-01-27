@@ -36,7 +36,7 @@ module.exports.scrape = async (text) => {
 
                 let iconElement = element.querySelector(".result__icon__img");
 
-                if(iconElement) icon = iconElement.getAttribute("href");
+                if(iconElement && iconElement.getAttribute) icon = iconElement.getAttribute("href");
 
                 results.push({
                     title,
