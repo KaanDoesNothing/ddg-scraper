@@ -31,8 +31,12 @@ module.exports.scrape = async (text) => {
             if(element.querySelector) {
                 let title = element.querySelector(".result__title").innerText;
                 let snippet = element.querySelector(".result__snippet").innerText;
-                let icon = element.querySelector(".result__icon__img").getAttribute("data-src");
+                let icon;
                 let url = element.querySelector(".result__url").href;
+
+                let iconElement = element.querySelector(".result__icon__img");
+
+                if(iconElement) icon = iconElement.getAttribute("href");
 
                 results.push({
                     title,
