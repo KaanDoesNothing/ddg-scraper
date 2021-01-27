@@ -46,7 +46,7 @@ module.exports.scrape = async (text) => {
         return results;
     });
 
-    await browser.close();
+    await page.close();
 
     return results;
 }
